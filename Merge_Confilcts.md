@@ -1,1 +1,1 @@
-# Merge Konflikte beheben
+# Arbeiten mit Merge Konflikten
