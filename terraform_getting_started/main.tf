@@ -6,8 +6,8 @@ terraform {
     }
   }
    backend "s3" {
-    bucket = "REPLACE-WITH-YOUR-BUCKET-NAME"
-    key    = "demo/terraform.tfstate"
+    bucket = "s3-pirelli-test"
+    key    = "app/terraform.tfstate"
     region = "us-east-1"
   }
 }
@@ -17,6 +17,7 @@ provider "aws" {
 resource "aws_instance" "demo" {
   ami           = "ami-0b6c6ebed2801a5cb" # ubuntu
   instance_type = "t2.micro"
+  key_name = "der-schlussel"
   tags = {
     Name = "test-server-iac"
   }
